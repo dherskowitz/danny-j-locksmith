@@ -1,0 +1,344 @@
+// Variables
+$bg: #E4E4E4;
+$white: #fff;
+$primary: #1B2B38;
+$primary-light: lighten($primary, 15%);
+$orange: #E87E04;
+$facebook: #1877F2;
+$instagram: #C32AA3;
+$darkgrey: #2e3131;
+$shadow: rgba(0, 0, 0, 0.5);
+$torqoise: #007d8d;
+
+// Sizes
+$desktop: 1200px;
+$laptop: 1024px;
+$tablet: 768px;
+$phone: 480px;
+
+// Mixins
+@mixin boxShadow {
+    box-shadow: 0 2px 6px 0px $shadow;
+}
+
+@mixin curveAllCorners {
+    border-radius: 5px;
+}
+
+@mixin curveBottomCorners {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+// Global
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $bg;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 100%;
+    margin: 8rem 12px 0;
+
+    @media(min-width: $tablet) {
+        margin: 10rem 2rem 0;
+    }
+
+    @media(min-width: $desktop) {
+        margin: 10rem auto 0;
+        max-width: 1080px;
+    }
+}
+
+section {
+    margin: 0;
+    margin-top: 2rem;
+    position: relative;
+    overflow: hidden;
+
+    @media(min-width: $phone) {
+        margin-top: 5rem;
+    }
+}
+
+.anchor {
+    position: absolute;
+    top: -5rem;
+}
+
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+    position: relative;
+    margin-bottom: 2rem;
+
+    &>span {
+        background-color: $bg;
+    }
+
+    &::before {
+        display: block;
+        content: "";
+        border-bottom: 0.8rem solid $white;
+        position: absolute;
+        top: 60%;
+        transform: translate(-50%, -50%);
+        width: 60rem;
+        max-width: 90%;
+        text-align: center;
+        left: 50%;
+        z-index: -1;
+        @include curveAllCorners;
+    }
+
+    @media(min-width: $phone) {
+        font-size: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    @media(min-width: $tablet) {}
+
+    @media(min-width: $desktop) {}
+}
+
+// Header
+.header {
+    background: $primary;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    max-width: 100vw;
+    z-index: 99;
+    left: 0;
+    @include boxShadow;
+
+    @media(min-width: $tablet) {
+        justify-content: space-around;
+    }
+
+    @media(min-width: $desktop) {
+        max-width: 1080px;
+        left: initial;
+        @include curveBottomCorners;
+    }
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+    align-items: center;
+
+    @media(min-width: $tablet) {
+        justify-content: space-around;
+    }
+}
+
+.nav__link {
+    color: $white;
+    text-decoration: none;
+    padding: 1.5rem 1rem;
+    font-size: 1rem;
+    transition: background-color 0.25s;
+
+    &:hover {
+        background-color: $primary-light;
+    }
+
+    @media(min-width: $tablet) {
+        padding: 1.5rem 2rem;
+        font-size: 1.25rem;
+    }
+}
+
+
+// Banner
+#banner {
+    width: 100%;
+    height: 570px;
+    background-image: url("../img/door.jpg");
+    background-repeat: no-repeat;
+    background-position: -30rem center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    @include boxShadow;
+    @include curveAllCorners;
+
+    @media(min-width: $phone) {
+        background-position: -20rem center;
+    }
+
+    @media(min-width: 620px) {
+        background-position: top center;
+    }
+
+    // @media(min-width: $tablet) {
+    //     background-position: top center;
+    // }
+}
+
+.banner__caption {
+    margin-left: 3rem;
+}
+
+//  Services
+.services__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.service {
+    width: calc(100% - 2rem);
+    height: 8rem;
+    margin: 1rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    text-align: center;
+    font-weight: 900;
+    font-style: italic;
+    padding: 0.5rem;
+    @include boxShadow;
+    @include curveAllCorners;
+
+    background: $darkgrey;
+    color: $white;
+    transition: all 0.25s;
+
+    &:hover {
+        background: $primary;
+        transform: scale(1.11);
+    }
+
+    @media(min-width: $phone) {
+        width: calc(50% - 2rem);
+        margin: 0 0.5rem 0.5rem;
+    }
+
+    @media(min-width: $tablet) {
+        width: calc(33.333% - 2rem);
+    }
+
+    @media(min-width: $desktop) {}
+}
+
+// Contact/CTA
+#contact-section {
+    width: 100%;
+    height: 570px;
+    background-image: url("../img/cta.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    display: flex;
+    align-items: center;
+    @include boxShadow;
+    @include curveAllCorners;
+
+    &>.banner__caption {
+        color: $white;
+    }
+}
+
+// About
+.about__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @media(min-width: $tablet) {
+        display: flex;
+        flex-direction: row;
+        text-align: initial;
+    }
+}
+
+.about__wrapper--left {
+    margin-right: 0;
+    margin-bottom: 3rem;
+
+    @media(min-width: $tablet) {
+        margin-right: 5rem;
+    }
+}
+
+.about__wrapper--right img {
+    border-radius: 50%;
+}
+
+.about__title {
+    font-size: 3rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+// Footer
+#footer {
+    margin: 0;
+    margin-top: 5rem;
+    background-color: $primary;
+    padding-top: 2rem;
+
+    // @media(min-width: $phone) {
+    //     margin-right: 5rem;
+    // }
+}
+
+.footer__btns {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+    @media(min-width: $phone) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 30rem;
+        margin: 0 auto;
+    }
+}
+
+.footer__btn {
+    width: 10rem;
+    display: block;
+    text-align: center;
+    margin: 1rem auto;
+    padding: 1rem;
+    color: $white;
+    text-decoration: none;
+}
+
+.footer__copy {
+    color: $white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.footer__btn--phone {
+    background-color: $primary-light;
+}
+
+.footer__btn--email {
+    background-color: $orange;
+}
+
+.footer__btn--facebook {
+    background-color: $facebook;
+}
+
+.footer__btn--instagram {
+    background-color: $instagram;
+}

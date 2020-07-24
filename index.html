@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./dist/app.css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <title>Danny J Locksmith</title>
+        <meta
+            name="description"
+            content="Professional locksmith in Jerusalem. Locks Opened/Repaired/Fitted, Keys Cut & more."
+        />
+    </head>
+    <body class="container">
+        <span id="home" class="anchor"></span>
+        <header class="header">
+            <nav class="nav">
+                <a class="nav__link" href="#home">Home</a>
+                <a class="nav__link" href="#services">Services</a>
+                <a class="nav__link" href="#contact">Contact</a>
+                <a class="nav__link" href="#about">About</a>
+            </nav>
+        </header>
+
+        <section id="banner">
+            <div class="banner__caption">
+                <h1
+                    class="banner__title"
+                    data-aos="fade-up-right"
+                    data-aos-duration="1000"
+                    data-aos-offset="200"
+                >
+                    Danny J
+                </h1>
+                <h3
+                    class="banner__subtitle"
+                    data-aos="fade-up-right"
+                    data-aos-offset="200"
+                    data-aos-duration="1000"
+                    data-aos-delay="300"
+                >
+                    Locksmith & House Maintenance
+                </h3>
+            </div>
+        </section>
+
+        <section id="services-section">
+            <span id="services" class="anchor"></span>
+            <div class="title">
+                <span>Services</span>
+            </div>
+            <div class="services__wrapper">
+                <div
+                    class="service"
+                    data-aos="fade-left"
+                    data-aos-offset="100"
+                    data-aos-duration="1000"
+                >
+                    Locks Opened/Repaired/Fitted
+                </div>
+                <div
+                    class="service"
+                    data-aos="fade-left"
+                    data-aos-offset="100"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
+                >
+                    Keys Cut
+                </div>
+                <div
+                    class="service"
+                    data-aos="fade-left"
+                    data-aos-offset="100"
+                    data-aos-delay="100"
+                    data-aos-duration="1000"
+                >
+                    Gate Automation & Access Control
+                </div>
+                <div
+                    class="service"
+                    data-aos="fade-left"
+                    data-aos-offset="100"
+                    data-aos-delay="150"
+                    data-aos-duration="1000"
+                >
+                    Intercoms
+                </div>
+                <div
+                    class="service"
+                    data-aos="fade-left"
+                    data-aos-offset="100"
+                    data-aos-delay="200"
+                    data-aos-duration="1000"
+                >
+                    Keys for Cars/Safes/Antiques
+                </div>
+                <div
+                    class="service"
+                    data-aos="fade-left"
+                    data-aos-offset="100"
+                    data-aos-delay="250"
+                    data-aos-duration="1000"
+                >
+                    Brass Handles & Fittings
+                </div>
+            </div>
+        </section>
+
+        <section
+            id="contact-section"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-offset="50"
+        >
+            <span id="contact" class="anchor"></span>
+            <div class="banner__caption">
+                <h1 class="banner__title">Free Quotation</h1>
+                <h3 class="banner__subtitle">
+                    Call now for a free quotation and consultation
+                </h3>
+                <button class="contact__btn">055-123-4567</button>
+            </div>
+        </section>
+
+        <section id="about-section">
+            <span id="about" class="anchor"></span>
+            <div class="title">
+                <span>About</span>
+            </div>
+            <div class="about__wrapper">
+                <div
+                    class="about__wrapper--left"
+                    data-aos="slide-right"
+                    data-aos-duration="1000"
+                    data-aos-offset="50"
+                >
+                    <div class="about__title">Daniel Jackson</div>
+                    <p class="about__content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Repellendus obcaecati inventore, impedit quis totam quam
+                        ipsa perspiciatis consequatur quisquam placeat excepturi
+                        corporis magni atque aspernatur quasi dicta non
+                        distinctio deleniti magnam fugit ut quos reprehenderit
+                        tempore dignissimos. Quis, culpa accusantium?
+                    </p>
+                    <p>055-123-4567</p>
+                    <p>danny@example.com</p>
+                </div>
+                <div
+                    class="about__wrapper--right"
+                    data-aos="slide-left"
+                    data-aos-duration="1000"
+                    data-aos-offset="50"
+                >
+                    <img src="./img/avatar.svg" alt="" />
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <div class="footer__btns">
+                <a
+                    href="tel:+972551234567"
+                    class="footer__btn footer__btn--phone"
+                    >055-123-4567</a
+                >
+                <a
+                    href="mailto:danny@example.com"
+                    class="footer__btn footer__btn--email"
+                    >danny@example.com</a
+                >
+                <a href="" class="footer__btn footer__btn--facebook"
+                    >Facebook</a
+                >
+                <a href="" class="footer__btn footer__btn--instagram"
+                    >Instagram</a
+                >
+            </div>
+            <div class="footer__copy">
+                &copy; All Rights Reserved
+                <span id="footer__year">2020</span> Daniel Jackson
+            </div>
+        </footer>
+
+        <script>
+            let yearSpan = document.querySelector("#footer__year");
+            let currentYear = new Date().getFullYear();
+            yearSpan.innerText = currentYear;
+        </script>
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </body>
+</html>
